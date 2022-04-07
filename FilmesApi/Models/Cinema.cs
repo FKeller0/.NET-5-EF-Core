@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FilmesApi.Models;
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
 
 namespace FilmesAPI.Models
 {
-    public class Cinema
-    {
-        [Key]
-        [Required]
-        public int Id { get; set; }
+    public class Cinema : BaseEntity
+    {        
         [Required(ErrorMessage = "O campo de nome é obrigatório")]
         public string Nome { get; set; }
         public int EnderecoFK { get; set; }
