@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FilmesApi.Models;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace FilmesAPI.Models
 {
-    public class Filme
-    {
-        [Key]
-        [Required]
-        public int Id { get; set; }
+    public class Filme : BaseEntity
+    {        
         [Required(ErrorMessage = "O campo de título é obrigatório")]
         public string Titulo { get; set; }
         [Required(ErrorMessage = "O campo de duração é obrigatório")]

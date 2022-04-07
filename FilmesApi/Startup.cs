@@ -33,6 +33,7 @@ namespace FilmesAPI
         {
             services.AddDbContext<AppDbContext>(opts => opts.UseNpgsql(Configuration.GetConnectionString("CinemaConnection")));
             services.AddControllers();
+            services.AddSwaggerGen();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
